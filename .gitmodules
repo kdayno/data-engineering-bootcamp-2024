@@ -1,0 +1,3 @@
+[submodule "data-engineer-handbook"]
+	path = data-engineer-handbook
+	url = https://github.com/DataExpert-io/data-engineer-handbook.git
