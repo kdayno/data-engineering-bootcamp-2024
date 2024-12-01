@@ -50,7 +50,8 @@ WITH last_year_scd AS(
                         ty.quality_class,
                         ty.is_active,
                         ty.start_date,
-                        ty.end_date
+                        '9999-01-01'
+--                         ty.end_date
                         )::scd_type]) AS records
         FROM this_year_data ty
         INNER JOIN last_year_scd ly ON ty.actor = ly.actor
@@ -80,18 +81,24 @@ WITH last_year_scd AS(
         WHERE ly.actor IS NULL
     )
 
+
+    -- Contains all historical data except data for the previous year which we are comparing to the current year
     SELECT * FROM historical_scd
 
     UNION ALL
 
+    -- Contains records from previous year that did not change compared to the current year
     SELECT * FROM unchanged_records
 
     UNION ALL
 
+    -- Contains records that changed from the previous year compared to the current year
+    -- 2 records for each actor: one with the previous year's data to maintain history and one with the current year's data that changed
     SELECT * FROM unnested_changed_records
 
     UNION ALL
 
+    -- Contains net new records that did not exist before
     SELECT * FROM new_records;
 
 
