@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="SqlDialectMappings">
-    <file url="file://$PROJECT_DIR$/nba_players_edges.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/nba_players_graph.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/players.sql" dialect="PostgreSQL" />
-    <file url="file://$PROJECT_DIR$/players_scd.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/week-1-dimensional-data-modeling/week-1-homework/actors_ddl.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/week-1-dimensional-data-modeling/week-1-homework/actors_full_load.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/week-1-dimensional-data-modeling/week-1-homework/actors_history_scd_ddl.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/week-1-dimensional-data-modeling/week-1-homework/actors_history_scd_full_load.sql" dialect="PostgreSQL" />
+    <file url="file://$PROJECT_DIR$/week-1-dimensional-data-modeling/week-1-homework/actors_history_scd_incremental_load.sql" dialect="PostgreSQL" />
   </component>
 </project>
