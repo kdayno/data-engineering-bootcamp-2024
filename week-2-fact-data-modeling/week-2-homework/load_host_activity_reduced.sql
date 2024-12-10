@@ -6,14 +6,14 @@ WITH daily_aggregate AS (
         COUNT(*) AS num_site_hits,
         COUNT(DISTINCT user_id) AS unique_site_hits
     FROM events
-    WHERE DATE(event_time) = DATE('2024-01-01')
+    WHERE DATE(event_time) = DATE('2024-01-02')
     GROUP BY host, DATE(event_time)
     ),
 
     yesterday_array AS (
         SELECT *
         FROM host_activity_reduced
-        WHERE month = DATE('2024-02-01')
+        WHERE month = DATE('2024-01-01')
     )
 
     SELECT
